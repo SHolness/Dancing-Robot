@@ -16,4 +16,5 @@ void loop() {
  if (digitalRead(buttonPin) == LOW)
  driveDistance(12, 150);
  turnRight();
+ turnLeft();
 }
