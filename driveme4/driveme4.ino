@@ -13,6 +13,7 @@ pinMode(buttonPin, INPUT_PULLUP);
 
 void loop() {
   // put your main code here, to run repeatedly:
+ if (digitalRead(buttonPin) == LOW)
  driveDistance(12, 150);
-  turnRight();
+ turnRight();
 }
