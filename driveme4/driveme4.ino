@@ -12,9 +12,9 @@ pinMode(buttonPin, INPUT_PULLUP);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
- if (digitalRead(buttonPin) == LOW)
- driveDistance(12, 150);
- turnRight();
- turnLeft();
+  motors.rightMotor(200);
+  motors.leftMotor(-200);
+delay(5000);
+  motors.rightMotor(200);
+  motors.leftMotor(0);
 }
