@@ -5,20 +5,15 @@ RedBotMotors motors;
 RedBotBumper lBumper = RedBotBumper(3);  
 RedBotBumper rBumper = RedBotBumper(11); 
 
-int buttonPin = 12; 
-
 int lBumperState;  
 int rBumperState;  
 
+const int buzzerPin = 9;
+
 RedBotEncoder encoder = RedBotEncoder(A2, 10);
 
-const int buzzerPin = 9;
-const int buttonPin = 12;
+
 void setup() {
-  // put your setup code here, to run once:
-pinMode(buttonPin, INPUT_PULLUP); // configures the button as an INPUT
-  // INPUT_PULLUP defaults it to HIGH.
-  pinMode(buzzerPin, OUTPUT);  // configures the buzzerPin as an OUTPUT
 }
 
 void loop() {
@@ -37,22 +32,22 @@ if (lBumperState == LOW)
     playDanceMusic();
     motors.rightMotor(-200);    
     motors.leftMotor(200);
-    delay(1000)
-    motors.rightMotor(200)
-    motors.leftMotor(0)  
+    delay(1000);
+    motors.rightMotor(200);
+    motors.leftMotor(0);  
   }
 if (rBumperState == LOW) 
   { 
     playDanceMusic();
     motors.rightMotor(-200);    
     motors.leftMotor(200);
-    delay(1000)
-    motors.rightMotor(0)
-    motors.leftMotor(200)  
+    delay(1000);
+    motors.rightMotor(0);
+    motors.leftMotor(200);  
   }
   
 }
-}
+
 void playDanceMusic()
 {
   //bar 1

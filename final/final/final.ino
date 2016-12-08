@@ -13,12 +13,9 @@ int rBumperState;
 RedBotEncoder encoder = RedBotEncoder(A2, 10);
 
 const int buzzerPin = 9;
-const int buttonPin = 12;
+
 void setup() {
-  // put your setup code here, to run once:
-pinMode(buttonPin, INPUT_PULLUP); // configures the button as an INPUT
-  // INPUT_PULLUP defaults it to HIGH.
-  pinMode(buzzerPin, OUTPUT);  // configures the buzzerPin as an OUTPUT
+
 }
 
 void loop() {
@@ -35,18 +32,20 @@ rBumperState = rBumper.read();
 if (lBumperState == LOW)
   { 
     playDanceMusic();
-    reverse();    
+    reverse();
+    delay(1000);    
     turnRight();  
   }
 if (rBumperState == LOW) 
   { 
     playDanceMusic();
-    reverse();   
+    reverse();
+    delay(1000);    
     turnLeft();  
   }
   
 }
-}
+
 void playDanceMusic()
 {
   //bar 1
