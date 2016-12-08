@@ -14,11 +14,6 @@ void loop()
 {
   // put your main code here, to run repeatedly:
   triangle();
-  delay(30000);
-  square();
-  delay(30000);
-  circle();
-  delay(30000);
 }
 
 void circle()
